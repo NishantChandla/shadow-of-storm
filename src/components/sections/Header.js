@@ -1,20 +1,24 @@
 import React from 'react';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
-    const selector = useSelector(state => {return state.walletConfig.user});
+import '../../css/header.css';
+import { Wallet } from './ConnnectWallet';
+
+const Header = (props) => {
 
     return (
-            <div className="ui menu black" style={{'marginTop':'5px'}}>
-                <a href="/#" className="ui header item">Template</a>
+        <div className="header-container">
 
-                <div className="right menu">
-                    {(selector.userAddress==="")?
-                    <a href="/#" className="item">Connect Wallet</a>:
-                    <a href="/#" className="item">Disconnect Wallet</a>}
-                </div>
+            <Link className="header-title" to="/">Shadow of Strom</Link>
+            <Link className="header-link" to="/marketplace">News</Link>
+            <div className="header-end">
+                <div className="header-wallet"><Wallet /></div>
             </div>
-        );
+        </div>
+    );
 }
+
+
 
 export default Header;

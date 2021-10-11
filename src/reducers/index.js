@@ -7,30 +7,6 @@ const persistConfig = {
 	storage,
 };
 
-
-const initialWalletState = {
-    user: {
-        userAddress : "",
-        userBalance : 0,
-    },
-}
-
-const connectWalletReducer = (config = initialWalletState, action) => {
-    switch(action.type){
-        case "CONNECT_WALLET":
-            return {...config,user: action.user, 
-                        };
-        case "DISCONNECT_WALLET":
-            storage.removeItem('persist:root')
-            return {...initialWalletState,
-                    };
-        case "CONNECT_WALLET_ERROR":
-            return config;
-        default:
-            return config;
-    }
-}
-
-const reducers = combineReducers({walletConfig: connectWalletReducer});
+const reducers = combineReducers({});
 const persistedReducer = persistReducer(persistConfig, reducers);
 export default persistedReducer;
