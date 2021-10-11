@@ -5,6 +5,7 @@ import { persistReducer } from "redux-persist";
 const persistConfig = {
 	key: "root",
 	storage,
+    blacklist: ['socketReducer']
 };
 
 
@@ -31,6 +32,15 @@ const connectWalletReducer = (config = initialWalletState, action) => {
     }
 }
 
-const reducers = combineReducers({walletConfig: connectWalletReducer});
+const socketReducer = (state = {}, action) => {
+    switch(action.type){
+        case "SET_SOCKET":
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
+const reducers = combineReducers({walletConfig: connectWalletReducer, socketReducer:socketReducer});
 const persistedReducer = persistReducer(persistConfig, reducers);
 export default persistedReducer;
