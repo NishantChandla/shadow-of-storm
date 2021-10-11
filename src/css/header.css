@@ -1,0 +1,20 @@
+.header-container{
+  display: flex;
+  flex-direction: row;
+  background-color: olive;
+}
+
+.header-title{
+  flex: 1;
+}
+.header-link{
+  flex: 2;
+}
+
+.header-wallet{
+}
+.header-end{
+  flex:1;
+  display:flex;
+  justify-content: end;
+}

@@ -41,6 +41,6 @@ const socketReducer = (state = {}, action) => {
     }
 }
 
-const reducers = combineReducers({walletConfig: connectWalletReducer, socketReducer:socketReducer});
+const reducers = combineReducers({socketReducer:socketReducer});
 const persistedReducer = persistReducer(persistConfig, reducers);
 export default persistedReducer;
