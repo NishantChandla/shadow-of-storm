@@ -1,19 +1,20 @@
-import { useState } from "react";
-
-import MatchMaking from "../sections/MatchMaking";
-
+import "../../css/home.css";
 const Home = () => {
-    const [matchMaking, setMatchMaking] = useState(false);
-
-    return (
-        <div>
-            <button onClick={()=>{setMatchMaking(!matchMaking)}}>Battle</button>
-            {matchMaking?
-                <MatchMaking setMatchMaking={setMatchMaking}/>
-                :null
-            }
-        </div>
-    )
-}
+	return (
+		<div className="home-center-container">
+            <br/>
+			<p className="home-heading">SHADOW OF STROM</p>
+            <p className="home-subtitle">A DIGITAL WORLD</p>
+            <div className="home-flex-container">
+                <p>Battle</p>
+                <p>Collect</p>
+                <p>Earn</p>
+            </div>
+            <button>
+                PLAY NOW
+            </button>
+		</div>
+	);
+};
 
 export default Home;

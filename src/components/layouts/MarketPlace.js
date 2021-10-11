@@ -1,0 +1,55 @@
+import "../../css/market-place.css";
+
+import Rairty1 from "../../assets/rarity1.png";
+import Rairty2 from "../../assets/rarity2.png";
+import Rairty3 from "../../assets/rarity3.png";
+
+import Shadow1 from "../../assets/shadow1.png";
+import Shadow2 from "../../assets/shadow2.png";
+import Shadow3 from "../../assets/shadow3.png";
+
+import level1 from "../../assets/level1.png";
+import level2 from "../../assets/level2.png";
+import level3 from "../../assets/level3.png";
+import level4 from "../../assets/level4.png";
+import level5 from "../../assets/level5.png";
+import level6 from "../../assets/level6.png";
+
+
+const MarketPlace = () => {
+	return (
+		<div>
+			<div className="marketplace-filters-flex-container">
+				<div className="vertical-filters-flex-containter">
+					<div>Rarity</div>
+					<div className="filter-child-flex-containter">
+						<img src={Rairty1} />
+						<img src={Rairty2} />
+						<img src={Rairty3} />
+					</div>
+				</div>
+				<div className="vertical-filters-flex-containter">
+					<div>Shadow</div>
+					<div className="filter-child-flex-containter">
+						<img src={Shadow1} />
+						<img src={Shadow2} />
+						<img src={Shadow3} />
+					</div>
+				</div>
+				<div className="vertical-filters-flex-containter">
+					<div>Level</div>
+					<div className="filter-child-flex-containter">
+						<img src={level1} />
+						<img src={level2} />
+						<img src={level3} />
+						<img src={level4} />
+						<img src={level5} />
+						<img src={level6} />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default MarketPlace;

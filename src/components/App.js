@@ -4,13 +4,16 @@ import Battle from './layouts/Battle';
 import BuildDeck from './layouts/BuildDeck';
 import Home from './layouts/Home';
 import Header from './sections/Header';
-import Background from '../assets/parallax.png'
+import MarketPlace from './layouts/MarketPlace';
 import '../css/app.css';
 const App = () => {
     return (
         <div className="app-body" style={{ }}>
             <Header />
             <Switch>
+                <Route path="/marketplace">
+                    <MarketPlace />
+                </Route>
                 <Route path="/build-deck">
                     <BuildDeck />
                 </Route>
@@ -18,9 +21,6 @@ const App = () => {
                     <Battle />
                 </Route>
                 <Route path="/">
-                    <Home />
-                </Route>
-                <Route path="/marketplace">
                     <Home />
                 </Route>
             </Switch>

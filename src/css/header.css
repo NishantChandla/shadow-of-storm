@@ -1,20 +1,52 @@
 .header-container{
   display: flex;
   flex-direction: row;
-  background-color: olive;
+  background-image: url(../assets/header-bg1.png);
+  box-sizing: content-box;
 }
 
-.header-title{
-  flex: 1;
-}
-.header-link{
-  flex: 2;
-}
 
 .header-wallet{
+  margin-top: 8px;
+  margin-right: 8px;
 }
+
 .header-end{
   flex:1;
   display:flex;
   justify-content: end;
+}
+.item-logo-container{
+  margin-left: 31px;
+  justify-content: center;
+}
+.item-logo-container p{
+  color: white;
+  font-size: 10px;
+}
+.header-container img{
+  height: 44px;
+  width: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+}
+.header-title img{
+  margin-top: 8px;
+}
+
+.header-container a:hover{
+  text-decoration: none;
+}
+.header-container a:link{
+  text-decoration: none;
+}
+
+.header-container a:active{
+  text-decoration: none;
+}
+.header-container a:visited{
+  text-decoration: none;
 }

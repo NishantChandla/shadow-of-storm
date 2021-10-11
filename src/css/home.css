@@ -1,0 +1,39 @@
+.home-center-container{
+    display: block;
+    margin: auto;
+    margin-top: 130px;
+    width: 864px;
+    height:486px;
+    background-image: url(../assets/home-play-bg.png);
+    
+}
+.home-heading{
+    margin-left: 93px;
+    margin-top: 37px;
+    font-size: 45px;
+    color: #D5A653;
+}
+.home-subtitle{
+    color: #D5A653;
+    font-size: 24px;
+    text-align: center;
+}
+.home-flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-size: 36px;
+}
+
+.home-center-container button{
+    background-image: url(../assets/home-play-button.png);
+    height: 133px;
+    font-size: 22px;
+    font-family: 'Press Start 2P', cursive;
+    color: #FEFFB8;
+    width: 261px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

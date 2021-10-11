@@ -39,10 +39,15 @@ export const Wallet = () => {
     ], [network]);
 
     return (
-        <ConnectionProvider endpoint={endpoint}>
-            <WalletProvider wallets={wallets} autoConnect={true}>
-                <WalletModalProvider>
-                    <WalletMultiButton />
+        <ConnectionProvider  endpoint={endpoint}>
+            <WalletProvider  wallets={wallets} autoConnect={true}>
+                <WalletModalProvider  >
+                    <WalletMultiButton style={{
+                        backgroundColor:"#B392DE",
+                        fontFamily: "'Press Start 2P', cursive",
+                        borderRadius:"15px",
+                        fontSize:"12px"
+                    }} />
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
