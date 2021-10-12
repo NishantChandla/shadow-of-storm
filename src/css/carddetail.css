@@ -1,0 +1,52 @@
+.card-details-header{
+    margin-top: 20px;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #525669;
+}
+.card-details-market-text{
+    color: #D5A653;
+    padding-left: 100px;
+    font-size: 14px;
+}
+
+.card-details-header-title{
+    margin-top: 20px;
+    color: #FEFFB8;
+    font-size: 20px;
+    padding-left: 100px;
+}
+.card-details-view{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-details-board{
+    width: 700px;
+    height: 381px;
+    background-image: url(../assets/card-details-board.png);
+}
+
+.card-details-view-row{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+}
+.card-details-view-row-one{
+    margin-top: 10px;
+}
+.card-details-view-attribute{
+    color: #FEFFB8;
+    text-shadow:
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px  2px 0 #000,
+    2px  2px 0 #000;
+ font-size: 24px;
+}
+.card-details-view-value{
+    color: white;
+    font-size: 24px;
+}
