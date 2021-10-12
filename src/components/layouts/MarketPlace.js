@@ -20,7 +20,52 @@ const MarketPlace = () => {
 	var cards = [
 		{
 			image: vampirePurlple,
-		}
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
+		{
+			image: vampirePurlple,
+		},
 	];
 	return (
 		<div>
@@ -57,7 +102,7 @@ const MarketPlace = () => {
 			<div className="marketplace-card-body">
 				<div className="marketplace-recently-listed">Recently Listed</div>
 				<div className="marketplace-grid">
-					{cards.map((e, idx) => (<div className="card" >
+					{cards.map((e, idx) => (<div className="card card-wide card-tall" >
 						<img src={e.image} />
 					</div>))
 					}

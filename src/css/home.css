@@ -12,11 +12,25 @@
     margin-top: 37px;
     font-size: 45px;
     color: #D5A653;
+    line-height: 45px;
+	/* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; */
+text-shadow:
+-4px -4px 0 #000,  
+ 4px -4px 0 #000,
+-4px  4px 0 #000,
+ 4px  4px 0 #000;
 }
+
 .home-subtitle{
     color: #D5A653;
     font-size: 24px;
     text-align: center;
+    text-shadow:
+-2px -2px 0 #000,  
+ 2px -2px 0 #000,
+-2px  2px 0 #000,
+ 2px  2px 0 #000;
 }
 .home-flex-container{
     display: flex;
@@ -24,6 +38,11 @@
     justify-content: space-around;
     color: white;
     font-size: 36px;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 .home-center-container button{
@@ -36,4 +55,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    text-shadow:
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+
 }

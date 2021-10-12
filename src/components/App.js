@@ -6,11 +6,15 @@ import Home from './layouts/Home';
 import Header from './sections/Header';
 import MarketPlace from './layouts/MarketPlace';
 import '../css/app.css';
+import CardDetail from './layouts/CardDetail';
 const App = () => {
     return (
         <div className="app-body" style={{ }}>
             <Header />
             <Switch>
+                <Route path="/marketplace/card/:id">
+                    <CardDetail />
+                </Route>
                 <Route path="/marketplace">
                     <MarketPlace />
                 </Route>
