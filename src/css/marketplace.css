@@ -1,0 +1,33 @@
+.marketplace-filters-flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #525669;
+}
+.vertical-filters-flex-containter{
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.marketplace-card-body{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.marketplace-recently-listed{
+    margin-top: 20px;
+    color: #D5A653;
+    margin-bottom: 30px;
+}
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+ }
