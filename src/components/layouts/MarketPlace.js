@@ -1,5 +1,4 @@
-import "../../css/market-place.css";
-
+import "../../css/marketplace.css";
 import Rairty1 from "../../assets/rarity1.png";
 import Rairty2 from "../../assets/rarity2.png";
 import Rairty3 from "../../assets/rarity3.png";
@@ -15,8 +14,14 @@ import level4 from "../../assets/level4.png";
 import level5 from "../../assets/level5.png";
 import level6 from "../../assets/level6.png";
 
+import vampirePurlple from "../../assets/vampire-purple.png";
 
 const MarketPlace = () => {
+	var cards = [
+		{
+			image: vampirePurlple,
+		}
+	];
 	return (
 		<div>
 			<div className="marketplace-filters-flex-container">
@@ -48,7 +53,18 @@ const MarketPlace = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+
+			<div className="marketplace-card-body">
+				<div className="marketplace-recently-listed">Recently Listed</div>
+				<div className="marketplace-grid">
+					{cards.map((e, idx) => (<div className="card" >
+						<img src={e.image} />
+					</div>))
+					}
+				</div>
+			</div>
+
+		</div >
 	);
 };
 
