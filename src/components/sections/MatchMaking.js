@@ -1,29 +1,27 @@
-import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
+import { useEffect } from "react";
 import { useHistory } from "react-router";
 //model -> shows anywhere
 import "../../css/match-making.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const MatchMaking = ({setMatchMaking}) => {
+    const selector = useSelector(state=>state.gameSocket);
     const history = useHistory();
-    const dispatch = useDispatch();
-	const [socket, setSocket] = useState(null);
 
 	useEffect(() => {
-		const newSocket = io(`ws://localhost:3000`);
-		setSocket(newSocket);
-        dispatch({type:"SET_SOCKET", payload:newSocket})
-		newSocket.on("match-connected", (message) => console.log(message));
-		newSocket.on("ready-battle", (message) => console.log(message));
-		newSocket.on("build-decks", (message) =>{ 
+        selector.emit("find-match", {"name":"nishant", "battle-won": 10})
+		selector.on("match-connected", (opponent) => console.log(opponent));
+		selector.on("build-decks", (message) =>{ 
             console.log(message);
-            history.push("/build-deck");
+            //push somewhere
+            history.push('/build-deck');
+            // then build deck and ready-battle
         });
-	}, [setSocket]);
+        selector.on("surrendered", message=>console.log(message));
+	}, [selector]);
 
     const onClose = () => {
-        socket.emit("match-making-cancel");
+        selector.emit("match-making-cancel");
         setMatchMaking(false);
     }
 
@@ -33,9 +31,18 @@ const MatchMaking = ({setMatchMaking}) => {
             <span className="close" onClick={onClose}>&times;</span>
             <p>Some text in the Modal..</p>
             loading...
-            <button onClick={()=>socket.emit("ready-battle")}>
+            <button onClick={()=>selector.emit("ready-battle")}>
                 ready
             </button>
+
+            <button onClick={()=>selector.emit("accept-battle")}>
+                accept
+            </button>
+
+            <button onClick={()=>selector.emit("reject-battle")}>
+                reject
+            </button>
+
         </div>
         </div>
         </div>;

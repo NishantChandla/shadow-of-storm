@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 
 const BuildDeck = () => {
-    const socket = useSelector(state=>state.socketReducer);
+    const socket = useSelector(state=>state.gameSocket);
     const history = useHistory();
 
     useEffect(()=>{
@@ -11,14 +11,16 @@ const BuildDeck = () => {
         if(Object.keys(socket).length === 0){
             history.push("/");
         }
-        return ()=>{
-            if(Object.keys(socket).length !== 0) socket.emit("match-making-cancel");
-        }
     },[socket])
 
     return (
         <div>
+            <div>
 
+            </div>
+            <div>
+                
+            </div>
         </div>
     )
 }

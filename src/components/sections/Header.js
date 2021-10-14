@@ -10,7 +10,7 @@ import battle from "../../assets/battle.png";
 import cards from "../../assets/cards.png";
 import shop from "../../assets/shop.png";
 
-const Header = (props) => {
+const Header = () => {
     return (
         <div className="header-container">
             <Link className="header-title" to="/"><img src={logo} /></Link>
@@ -32,7 +32,7 @@ const Header = (props) => {
                   <p>Cards</p>
                 </div>
             </Link>
-            <Link className="header-link" to="/marketplace">
+            <Link className="header-link" to="/battle">
                 <div className="item-logo-container">
                 <img src={battle} /> 
               <p>Battle</p>
