@@ -13,15 +13,20 @@ import level3 from "../../assets/level3.png";
 import level4 from "../../assets/level4.png";
 import level5 from "../../assets/level5.png";
 import level6 from "../../assets/level6.png";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
-import vampirePurlple from "../../assets/vampire-purple.png";
 
 const MarketPlace = () => {
-	var cards = [
-		{
-			image: vampirePurlple,
-		}
-	];
+	const selector = useSelector(state=>state.marketplaceData);
+	const [marketData, setMarketData] = useState([]);
+	console.log(selector);
+
+	useEffect(()=>{
+		setMarketData(selector);
+	},[selector]);
+
+
 	return (
 		<div>
 			<div className="marketplace-filters-flex-container">
@@ -57,9 +62,10 @@ const MarketPlace = () => {
 			<div className="marketplace-card-body">
 				<div className="marketplace-recently-listed">Recently Listed</div>
 				<div className="marketplace-grid">
-					{cards.map((e, idx) => (<div className="card" >
-						<img src={e.image} />
-					</div>))
+					{marketData.map((e, idx) => (
+						<div className="card card-wide card-tall">
+							<img src={e.image_uri} />
+						</div>))
 					}
 				</div>
 			</div>

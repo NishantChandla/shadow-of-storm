@@ -1,0 +1,27 @@
+.battle-strategy-container{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.battle-strategy-flex-container{
+    margin: 2vmin;
+    display: grid;
+    grid-template-rows: repeat(9, 10vmin);
+    grid-template-columns: repeat(9, 10vmin);
+}
+
+.battle-strategy-flex-container div{
+    width: 10vmin;
+    height: 10vmin;
+    background-image: url('../assets/tile_plain.png');
+    background-size: cover;
+    position: relative;
+}
+
+.battle-strategy-flex-container div img{
+    width: 10vmin;
+    position: absolute;
+    bottom: 0;
+    /* object-fit: cover; */
+}

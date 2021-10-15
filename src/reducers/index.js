@@ -19,6 +19,33 @@ const socketReducer = (state = {}, action) => {
     }
 }
 
-const reducers = combineReducers({gameSocket:socketReducer});
+const marketplaceReducer = (state=[], action) => {
+    switch(action.type){
+        case "SET_MARKETPLACE_CARDS":
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
+const allCardsReducer = (state=[], action) => {
+    switch(action.type){
+        case "SET_ALL_CARDS":
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
+const userCardsReducer = (state=[], action) => {
+    switch(action.type){
+        case "SET_USER_CARDS":
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
+const reducers = combineReducers({gameSocket:socketReducer, marketplaceData: marketplaceReducer, userData: userCardsReducer, allCards: allCardsReducer});
 const persistedReducer = persistReducer(persistConfig, reducers);
 export default persistedReducer;
