@@ -98,15 +98,29 @@ const BuildDeck = () => {
 	return (
 		<div className="build-deck-flex-container">
 			<div className="build-deck-selected">
-                <button onClick={onReady}>Ready</button>
-                <p>MANA 2/6</p>
-				<div className="build-deck-recently-listed">Your Deck</div>
-				<div className="build-deck-grid">
-					{selected.map((e) => (
-						<div className="card card-wide card-tall">
-							<img src={e.image} />
-						</div>
-					))}
+				<div className="mana-container">
+                <p className="mana-heading">MANA</p>
+				<p className="mana-heading">2/6</p>
+                <button className="build-deck-strategy-button" onClick={onReady}>Ready</button>
+
+				<div className="build-deck-mana-view1">
+					<br/>
+					<div className="build-deck-mana-name">Name</div>
+					<div className="build-deck-mana-value" >Mana</div>
+				</div>
+
+				<div className="build-deck-mana-view2">
+					<br/>
+					<div className="build-deck-mana-name">Name</div>
+					<div className="build-deck-mana-value" >Mana</div>
+				</div>
+
+				<div className="build-deck-mana-view3">
+					<br/>
+					<div className="build-deck-mana-name">Name</div>
+					<div className="build-deck-mana-value" >Mana</div>
+				</div>
+			
 				</div>
 			</div>
 

@@ -43,3 +43,12 @@
   grid-auto-rows: 381px; 
   grid-auto-columns: 249px;
 }
+
+
+.unselected-filter{
+    filter: contrast(0.5);
+}
+
+.selected-filter{
+    filter: contrast(1);
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import '../../css/battle.css';
 import MatchMaking from "../sections/MatchMaking";
 const Battle = () => {
     
@@ -7,13 +7,34 @@ const Battle = () => {
 
     return (
         <div>
-            <button onClick={()=>{setMatchMaking(!matchMaking)}}>Battle</button>
+            <div className="battle-header-view" >
+            <div className="battle-find-match">
+                <br/>
+                <div className="battle-header-box-title" >Find match</div>
+                <div className="battle-battle-subheading-text" >Earn dark matter crystal by winning!</div>
+                <button className="battle-battle-button" onClick={()=>{setMatchMaking(!matchMaking)}}>Battle</button>
+            </div>
+
+            <div className="battle-open-shop">
+            <br/>
+
+                <div className="battle-header-box-title shop-header-color" >Unlock Quest</div>
+                <div className="battle-battle-subheading-text">Earn a pack of powerful cards!</div>
+                <button className="battle-shop-button">Shop</button>
+            </div>
+
+            </div>
+            
             {matchMaking?
                 <MatchMaking setMatchMaking={setMatchMaking}/>
                 :null
             }
+
+
+
         </div>
     )
+
 }
 
 export default Battle;
