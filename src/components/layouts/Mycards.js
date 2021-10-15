@@ -29,7 +29,7 @@ const MyCards = () => {
                 {cards.map((e, idx) => (
                     <div key={idx} className="card card-wide card-tall">
                         {/* <img src={e.image_uri} /> */}
-                        <CardView onClick={() => { history.push('/marketplace/card/' + e.mint_id, { from: window.location.pathname, name:"My Cards" }) }} image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
+                        <CardView  isPurple={e.rarity=="Purple"}  onClick={() => { history.push('/marketplace/card/' + e.mint_id, { from: window.location.pathname, name:"My Cards" }) }} image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
                     </div>))
                 }
             </div>

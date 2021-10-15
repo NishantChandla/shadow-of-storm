@@ -116,7 +116,7 @@ const MarketPlace = () => {
 				<div className="marketplace-grid">
 					{marketData.map((e, idx) => (
 						<div className="card card-wide card-tall">
-							<CardView onClick={() => { history.push('/marketplace/card/' + e.mint_id, { from: window.location.pathname, name:"Market" }) }} image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
+							<CardView onClick={() => { history.push('/marketplace/card/' + e.mint_id, { from: window.location.pathname, name:"Market" }) }} isPurple={e.rarity=="Purple"} image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
 						</div>))
 					}
 				</div>
