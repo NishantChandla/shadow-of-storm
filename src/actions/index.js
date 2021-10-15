@@ -12,6 +12,7 @@ export const fetchMarketplace = () => {
 
 export const fetchUserCards = ({address}) => {
     return async (dispatch, getState) => {
+        await dispatch(fetchMarketplace());
         const { allCards } = getState();
         console.log(allCards);
         const userCards = allCards.filter((obj)=>obj.owner===address);
