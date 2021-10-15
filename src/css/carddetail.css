@@ -36,7 +36,8 @@
     margin: 0px 70px;
 }
 .card-details-view-row-one{
-    margin-top: 10px;
+    margin-top: 20px;
+    
 }
 .card-details-view-attribute{
     color: #FEFFB8;
@@ -45,9 +46,12 @@
     2px -2px 0 #000,
     -2px  2px 0 #000,
     2px  2px 0 #000;
+    font-size: 13px;
 }
 .card-details-view-value{
     color: white;
+    font-size: 13px;
+
 }
 
 .card-details-buy-sell-button{
@@ -73,4 +77,11 @@
     -2px  2px 0 #000,
      2px  2px 0 #000;
     cursor: pointer;
+}
+
+.form-field-card-details-sell-card{
+    display: block;
+    margin-left: 250px;
+    margin-top: 30px;
+    color: #FEFFB8;
 }
