@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { useHistory } from "react-router";
 import { io } from "socket.io-client";
 //model -> shows anywhere
@@ -9,6 +9,7 @@ const MatchMaking = ({setMatchMaking}) => {
     const selector = useSelector(state=>state.gameSocket);
     const history = useHistory();
     const dispatch = useDispatch();
+    const [foundMatch, setfoundMatch] = useState(true);
 
     const setupBeforeUnloadListener = () => {
 		window.addEventListener("beforeunload", (ev) => {
@@ -49,8 +50,46 @@ const MatchMaking = ({setMatchMaking}) => {
 	return <div className="modal-container">
         <div id="myModal" className="modal">
         <div className="modal-content">
-            <span className="close" onClick={onClose}>&times;</span>
-            <p>Some text in the Modal..</p>
+            <div className='battle-making-box'>
+            {foundMatch?
+            <div>
+              <div className="find-matchmaking-heading" >Match found</div>
+              <div className="modal-details-view-row">
+              <p className="modal-details-view-attribute">Rarity</p>
+              <p className="modal-details-view-value">Gold</p>
+          </div>
+          <div className="modal-details-view-row">
+              <p className="modal-details-view-attribute">Rarity</p>
+              <p className="modal-details-view-value">Gold</p>
+          </div>
+          <div className="modal-details-view-row">
+              <p className="modal-details-view-attribute">Rarity</p>
+              <p className="modal-details-view-value">Gold</p>
+          </div>
+
+          <div className="modal-details-view-row">
+              <button className="modal-battle-button" >Battle</button>
+              <button className="modal-surrender-button">Surrender</button>
+          </div>
+          </div>
+            
+            :
+            <div className="finding-match">
+                <div className="find-matchmaking-heading">Finding Match</div>
+                <div  className="find-matchmaking-subheading" >SPLINTER BITES Some abilities have a wider range of attack, which can help discover enemies easier.</div>
+                <div  className="find-matchmaking-desription">Searching...</div>
+
+
+            </div>
+            
+            
+            
+            }
+</div>
+
+
+
+            {/* <p>Some text in the Modal..</p>
                 loading...
 
             <button onClick={()=>selector.emit("accept-battle")}>
@@ -59,7 +98,7 @@ const MatchMaking = ({setMatchMaking}) => {
 
             <button onClick={()=>selector.emit("reject-battle")}>
                 reject
-            </button>
+            </button> */}
 
         </div>
         </div>
