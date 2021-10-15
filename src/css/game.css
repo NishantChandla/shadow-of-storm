@@ -1,32 +1,33 @@
-.battle-strategy-container{
+.game-container{
     display: flex;
+    flex-direction: column;
     justify-content: start;
     width: 100%;
 }
 
-.battle-strategy-flex-container{
+.game-flex-container{
     margin: 2vmin;
     display: grid;
-    grid-template-rows: repeat(9, 10vmin);
-    grid-template-columns: repeat(9, 10vmin);
+    grid-template-rows: repeat(9, 9vmin);
+    grid-template-columns: repeat(9, 9vmin);
 }
 
-.battle-strategy-flex-container div{
-    width: 10vmin;
-    height: 10vmin;
-    background-image: url('../assets/tile_plain.png');
+.game-flex-container div{
+    width: 9vmin;
+    height: 9vmin;
     background-size: cover;
     position: relative;
 }
 
-.battle-strategy-flex-container div img{
+.game-flex-container div img{
     width: 10vmin;
     position: absolute;
     bottom: 0;
+    z-index: 999;
     /* object-fit: cover; */
 }
 
-.battles-strategy-button{
+.game-button{
     margin-top: 20px;
     background-image: url(../assets/home-play-button.png);
     height: 72px;
@@ -43,11 +44,43 @@
      2px -2px 0 #000,
     -2px  2px 0 #000,
      2px  2px 0 #000;
-     
  }
 
- .battle-strategy-title{
-    margin-left: 30px;
+ .game-arena{
+     display: flex;
+     flex-direction: row;
+ }
+
+.card-selected{
+    border: gold 2px solid;
+}
+
+.plain{
+    background-image: url('../assets/tile_plain.png');
+    
+}
+
+.miss{
+    background-image: url('../assets/tile_cracked.png');
+}
+
+.turn-indicator{
+    height: 70px;
+    width: 70px;
+    transform: rotate(180deg);
+}
+
+.my-turn{
+    transform: rotate(180deg);
+}
+
+.away-turn{
+    transform: rotate(0deg);
+}   
+
+
+.game-title{
+    padding-left: 30px;
     color: #D5A653;
 	/* -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black; */
@@ -58,8 +91,8 @@ text-shadow:
  3px  3px 0 #000;
  }
 
- .battle-strategy-sub-title{
-    margin-left: 30px;
+.game-sub-title{
+    padding-left: 30px;
     color: #D4F4FF;
 	/* -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black; */
@@ -68,10 +101,4 @@ text-shadow:
  1px -1px 0 #000,
 -1px  1px 0 #000,
  1px  1px 0 #000;
-}
-
-.battle-strategy-deck-selected{
-    flex: 2;
-    padding-left: 50px;
-    padding-right: 50px;
 }

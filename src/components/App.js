@@ -19,6 +19,7 @@ import {
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { clusterApiUrl } from "@solana/web3.js";
 
+import Game from './layouts/Game';
 import Battle from "./layouts/Battle";
 import BuildDeck from "./layouts/BuildDeck";
 import Home from "./layouts/Home";
@@ -69,6 +70,9 @@ const App = () => {
 					<WalletModalProvider>
 						<Header />
 						<Switch>
+							<Route path="/game">
+								<Game />
+							</Route>
 							<Route path="/battle_strategy">
 								<BattleStrategy />
 							</Route>

@@ -1,9 +1,9 @@
 import '../../css/cardview.css';
-const CardView = ({ image, name, attackpoint, health, mana, level, onClick }) => {
+const CardView = ({ image, name, attackpoint, health, mana, level, onClick, id }) => {
 
 
     return (
-        <div className="cardview" onClick={onClick}>
+        <div id={id} image_uri={image} className="cardview" onClick={onClick}>
             <img src={image} />
             <div className="cardview-name">{name}</div>
             <div className="heart-icon"></div>
