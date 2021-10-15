@@ -16,17 +16,18 @@ import level6 from "../../assets/level6.png";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import CardView from "../ui/CardView";
+import { useHistory } from "react-router";
 
 
 const MarketPlace = () => {
-	const selector = useSelector(state=>state.marketplaceData);
+	const selector = useSelector(state => state.marketplaceData);
+	const history = useHistory();
 	const [marketData, setMarketData] = useState([]);
 	console.log(selector);
 
-	useEffect(()=>{
+	useEffect(() => {
 		setMarketData(selector);
-	},[selector]);
-
+	}, [selector]);
 
 	return (
 		<div>
@@ -65,7 +66,7 @@ const MarketPlace = () => {
 				<div className="marketplace-grid">
 					{marketData.map((e, idx) => (
 						<div className="card card-wide card-tall">
-							<CardView image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
+							<CardView onClick={() => { history.push('/marketplace/card/' + e.mint_id, { from: window.location.pathname, name:"Market" }) }} image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
 						</div>))
 					}
 				</div>
