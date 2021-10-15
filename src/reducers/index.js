@@ -46,6 +46,6 @@ const userCardsReducer = (state=[], action) => {
     }
 }
 
-const reducers = combineReducers({gameSocket:socketReducer, marketplaceData: marketplaceReducer, userData: userCardsReducer, allCards: allCardsReducer});
+const reducers = combineReducers({gameSocket:socketReducer, marketplaceData: marketplaceReducer, userCards: userCardsReducer, allCards: allCardsReducer});
 const persistedReducer = persistReducer(persistConfig, reducers);
 export default persistedReducer;

@@ -28,7 +28,7 @@ import "../css/app.css";
 import CardDetail from "./layouts/CardDetail";
 import BattleStrategy from "./layouts/Battle-strategy";
 import { fetchMarketplace } from "../actions";
-
+import MyCards from "./layouts/Mycards";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const App = () => {
@@ -77,6 +77,9 @@ const App = () => {
 							</Route>
 							<Route path="/marketplace">
 								<MarketPlace />
+							</Route>
+							<Route path="/mycards">
+								<MyCards />
 							</Route>
 							<Route path="/build_deck">
 								<BuildDeck />

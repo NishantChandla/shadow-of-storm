@@ -20,16 +20,17 @@ const Header = () => {
               <p>Shop</p>
                 </div>
             </Link>
+            
             <Link className="header-link" to="/marketplace">
                 <div className="item-logo-container">
                 <img src={market} /> 
                 <p>Market</p>
                 </div>
             </Link>
-            <Link className="header-link" to="/marketplace">
+            <Link className="header-link" to="/mycards">
                 <div className="item-logo-container">
                 <img src={cards} /> 
-                  <p>Cards</p>
+                  <p>My Cards</p>
                 </div>
             </Link>
             <Link className="header-link" to="/battle">

@@ -15,6 +15,7 @@ import level5 from "../../assets/level5.png";
 import level6 from "../../assets/level6.png";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import CardView from "../ui/CardView";
 
 
 const MarketPlace = () => {
@@ -64,7 +65,7 @@ const MarketPlace = () => {
 				<div className="marketplace-grid">
 					{marketData.map((e, idx) => (
 						<div className="card card-wide card-tall">
-							<img src={e.image_uri} />
+							<CardView image={e.image_uri} name={e.name} level={e.level} health={e.health} attackpoint={e.attackpoints} mana={e.mana} ></CardView>
 						</div>))
 					}
 				</div>
