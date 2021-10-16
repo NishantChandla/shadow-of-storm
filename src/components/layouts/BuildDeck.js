@@ -30,8 +30,8 @@ const BuildDeck = () => {
 		setMyCards(c);
 		let m = 0;
 		setSelectedCards(cards.filter((obj) => {
-			if(selected.includes(obj.mint_id)){
-				m+=obj.mana;
+			if (selected.includes(obj.mint_id)) {
+				m += obj.mana;
 				return true;
 			}
 		}));
@@ -56,7 +56,7 @@ const BuildDeck = () => {
 	}, [socket]);
 
 	const onReady = () => {
-		dispatch({type:"SET_SELECTED_CARDS", payload: selectedCards});
+		dispatch({ type: "SET_SELECTED_CARDS", payload: selectedCards });
 		// go to making deck arragement
 		history.push("/battle_strategy");
 	};
@@ -80,13 +80,13 @@ const BuildDeck = () => {
 							<div>
 								<div className="build-deck-mana-name">
 									{obj.name}
-									<span style={{ cursor: "pointer", color:"red" }} onClick={()=> {if(mana<25){setSelected(selected.filter((e)=>e!==obj.mint_id))}}}>
+									<span style={{ cursor: "pointer", color: "red" }} onClick={() => { if (mana < 25) { setSelected(selected.filter((e) => e !== obj.mint_id)) } }}>
 										{" "}
 										X
 									</span>
 								</div>
 								<div className="build-deck-mana-value">
-								 	Mana: {obj.mana}
+									Mana: {obj.mana}
 								</div>
 							</div>
 						</div>
@@ -115,7 +115,7 @@ const BuildDeck = () => {
 							<CardView
 								onClick={() => {
 									console.log("c");
-									if(mana<25){
+									if (mana <= 15 && mana + e.mana <= 15) {
 										setSelected([...selected, e.mint_id]);
 									}
 								}}

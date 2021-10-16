@@ -14,7 +14,7 @@ const CardView = ({ image, name, attackpoint, health, mana, level, onClick, isPu
         </div >
     }
 
-    return <div className="cardview" onClick={onClick}>
+    return <div id={id} image_uri={image} className="cardview" onClick={onClick}>
         < img src={image} />
         <div className="cardview-name">{name}</div>
         <div className="heart-icon"></div>

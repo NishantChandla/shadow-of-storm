@@ -116,6 +116,7 @@ const BattleStrategy = () => {
 			console.log("setting-listeners");
 			cards[i].addEventListener("dragstart", (e) => {
 				fromCards = true;
+				console.log(e);
 				draggedPath = e.path[2];
 				draggedCard = e.path[1].getAttribute("image_uri");
 				props = e.path[1].getAttribute("id");

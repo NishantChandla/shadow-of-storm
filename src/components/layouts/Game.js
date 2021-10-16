@@ -171,9 +171,6 @@ const Game = () => {
 							}
 						}}
 					>
-						<img
-							src={TileCracked}
-						/>
 					</div>
 				);
 			}
